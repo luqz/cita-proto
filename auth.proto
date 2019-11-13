@@ -50,3 +50,23 @@ message Miscellaneous {
 
 message MiscellaneousReq {
 }
+
+message BalanceVerifyTransaction {
+  bytes request_id = 1;
+  bool is_local = 2;
+  bytes sender = 3;
+  SignedTransaction signed_tx = 4;
+}
+
+message BalanceVerifyReq {
+  repeated BalanceVerifyTransaction bv_txs = 1;
+}
+
+message BalanceVerifyResult {
+  BalanceVerifyTransaction bv_tx = 1;
+  bool passed = 2;
+}
+
+message BalanceVerifyRes {
+  repeated BalanceVerifyResult bv_results = 1;
+}

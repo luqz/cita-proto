@@ -53,5 +53,8 @@ message InnerMessage {
         BlockTxn BlockTxn = 27;
 
         CompactSignedProposal CompactSignedProposal = 28;
+
+        BalanceVerifyReq BalanceVerifyReq = 29;
+        BalanceVerifyRes BalanceVerifyRes = 30;
     }
 }
